@@ -1,2 +1,1 @@
-# Proyecto #2
-Guardado de texto
+Generador de script con menu avanzado + offset
