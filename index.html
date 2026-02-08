@@ -57,7 +57,7 @@
             <div class="bg-indigo-600 p-1.5 rounded-lg shadow-lg">
                 <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
             </div>
-            <h1 class="text-[10px] font-black tracking-tighter uppercase italic leading-none">GG BUILDER <span class="text-indigo-400">V9.9 ATOMIC</span></h1>
+            <h1 class="text-[10px] font-black tracking-tighter uppercase italic leading-none">GG BUILDER <span class="text-indigo-400">V9.9</span></h1>
         </div>
         <div class="flex gap-2">
             <button onclick="exportBackup()" title="Guardar Proyecto" class="p-2 bg-slate-800 rounded-lg text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -391,7 +391,7 @@
         function exportBackup() {
             const data = JSON.stringify({activeBlocks, collapsedStates});
             const blob = new Blob([data], {type: 'text/plain'});
-            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'proyecto_final_fix.txt'; a.click();
+            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'Backup_script.txt'; a.click();
         }
 
         function importBackup(e) {
@@ -400,7 +400,7 @@
                 const d = JSON.parse(ev.target.result);
                 activeBlocks = d.activeBlocks; collapsedStates = d.collapsedStates || {};
                 render();
-                showToast("Proyecto Cargado");
+                showToast("Copia aplicada");
             }; r.readAsText(f);
         }
 
